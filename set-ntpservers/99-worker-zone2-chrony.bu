@@ -1,0 +1,18 @@
+variant: openshift
+version: 4.15.0
+metadata:
+  name: 99-worker-chrony-zone2
+  labels:
+    machineconfiguration.openshift.io/role: zone2
+storage:
+  files:
+  - path: /etc/chrony.conf
+    mode: 0644 
+    overwrite: true
+    contents:
+      inline: |
+        pool 3.rhel.pool.ntp.org iburst
+        driftfile /var/lib/chrony/drift
+        makestep 1.0 3
+        rtcsync
+        logdir /var/log/chrony
