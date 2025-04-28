@@ -1,0 +1,169 @@
+Script started at: 25-28-04-08-53-36
+Testing site: registry.redhat.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to registry.redhat.io: 301
+Reg 2 to registry.redhat.io: 301
+Reg 3 to registry.redhat.io: 301
+HTTP code counts for registry.redhat.io:
+  301: 3
+Testing site: docker.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to docker.io: 301
+Reg 2 to docker.io: 301
+Reg 3 to docker.io: 301
+HTTP code counts for docker.io:
+  301: 3
+Testing site: access.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to access.redhat.com: 301
+Reg 2 to access.redhat.com: 301
+Reg 3 to access.redhat.com: 301
+HTTP code counts for access.redhat.com:
+  301: 3
+Testing site: registry.access.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to registry.access.redhat.com: 301
+Reg 2 to registry.access.redhat.com: 301
+Reg 3 to registry.access.redhat.com: 301
+HTTP code counts for registry.access.redhat.com:
+  301: 3
+Testing site: quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to quay.io: 301
+Reg 2 to quay.io: 301
+Reg 3 to quay.io: 301
+HTTP code counts for quay.io:
+  301: 3
+Testing site: cdn.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn.quay.io: 403
+Reg 2 to cdn.quay.io: 403
+Reg 3 to cdn.quay.io: 403
+HTTP code counts for cdn.quay.io:
+  403: 3
+Testing site: cdn01.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn01.quay.io: 403
+Reg 2 to cdn01.quay.io: 403
+Reg 3 to cdn01.quay.io: 403
+HTTP code counts for cdn01.quay.io:
+  403: 3
+Testing site: cdn02.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn02.quay.io: 403
+Reg 2 to cdn02.quay.io: 403
+Reg 3 to cdn02.quay.io: 403
+HTTP code counts for cdn02.quay.io:
+  403: 3
+Testing site: cdn03.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn03.quay.io: 301
+Reg 2 to cdn03.quay.io: 301
+Reg 3 to cdn03.quay.io: 301
+HTTP code counts for cdn03.quay.io:
+  301: 3
+Testing site: cdn04.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn04.quay.io: 301
+Reg 2 to cdn04.quay.io: 301
+Reg 3 to cdn04.quay.io: 301
+HTTP code counts for cdn04.quay.io:
+  301: 3
+Testing site: cdn05.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn05.quay.io: 301
+Reg 2 to cdn05.quay.io: 301
+Reg 3 to cdn05.quay.io: 301
+HTTP code counts for cdn05.quay.io:
+  301: 3
+Testing site: cdn06.quay.io
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cdn06.quay.io: 301
+Reg 2 to cdn06.quay.io: 301
+Reg 3 to cdn06.quay.io: 301
+HTTP code counts for cdn06.quay.io:
+  301: 3
+Testing site: sso.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to sso.redhat.com: 301
+Reg 2 to sso.redhat.com: 301
+Reg 3 to sso.redhat.com: 301
+HTTP code counts for sso.redhat.com:
+  301: 3
+Testing site: cert-api.access.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to cert-api.access.redhat.com: 000
+Reg 2 to cert-api.access.redhat.com: 000
+Reg 3 to cert-api.access.redhat.com: 000
+HTTP code counts for cert-api.access.redhat.com:
+  0: 3
+Testing site: api.access.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to api.access.redhat.com: 000
+Reg 2 to api.access.redhat.com: 000
+Reg 3 to api.access.redhat.com: 000
+HTTP code counts for api.access.redhat.com:
+  0: 3
+Testing site: infogw.api.openshift.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to infogw.api.openshift.com: 302
+Reg 2 to infogw.api.openshift.com: 302
+Reg 3 to infogw.api.openshift.com: 302
+HTTP code counts for infogw.api.openshift.com:
+  302: 3
+Testing site: console.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to console.redhat.com: 301
+Reg 2 to console.redhat.com: 301
+Reg 3 to console.redhat.com: 301
+HTTP code counts for console.redhat.com:
+  301: 3
+Testing site: api.openshift.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to api.openshift.com: 302
+Reg 2 to api.openshift.com: 302
+Reg 3 to api.openshift.com: 302
+HTTP code counts for api.openshift.com:
+  302: 3
+Testing site: console.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to console.redhat.com: 301
+Reg 2 to console.redhat.com: 301
+Reg 3 to console.redhat.com: 301
+HTTP code counts for console.redhat.com:
+  301: 3
+Testing site: mirror.openshift.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to mirror.openshift.com: 301
+Reg 2 to mirror.openshift.com: 301
+Reg 3 to mirror.openshift.com: 301
+HTTP code counts for mirror.openshift.com:
+  301: 3
+Testing site: registry.connect.redhat.com
+./test.sh: line 83: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+Reg 1 to registry.connect.redhat.com: 301
+Reg 2 to registry.connect.redhat.com: 301
+Reg 3 to registry.connect.redhat.com: 301
+HTTP code counts for registry.connect.redhat.com:
+  301: 3
