@@ -16,3 +16,13 @@ spec:
             summary: Total request count is high				
             description: example app {{ $labels.service }} - High request count
             message: Total message count is {{ $value }}
+    - alert: memorytolimit
+      expr: (sum(container_memory_working_set_bytes{job="kubelet", metrics_path="/metrics/cadvisor", cluster="", namespace="monitoringdemo",container!="", image!=""}) / sum(kube_pod_container_resource_limits{job="kube-state-metrics", cluster="", namespace="monitoringdemo", resource="memory"}) ) > .05
+      labels:
+           severity: critical
+           app: prometheus-example-app
+      annotations:
+            summary: Relation betwen memory usage and limit
+            description: example app {{ $labels.service }} - Memory usage is high		
+            message: Percentange of limit memory is {{ $value }}
+            for: 5m

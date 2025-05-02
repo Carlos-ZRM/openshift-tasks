@@ -1,0 +1,43 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: kube-prometheus
+    app.kubernetes.io/part-of: openshift-monitoring
+    prometheus: k8s
+    role: alert-rules
+  name:  custom-monitoring-rules
+  namespace: openshift-monitoring
+spec:
+  groups:
+    - name: image-pull-errors-in-namespace-custom
+      rules:
+        - alert: ImagePullErrorsByNamespace
+          expr: sum(count_over_time(kube_pod_container_status_waiting_reason{reason=~"ImagePull.*"}[5m])) by (namespace) > 5
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Image pull errors detected in namespace {{ $labels.namespace }} over the last 5 minutes."
+            message: "There are {{ $value }} image pull errors in the namespace {{ $labels.namespace }} over the last 5 minutes."
+            description: "There are {{ $value }} image pull errors in the namespace {{ $labels.namespace }} over the last 5 minutes."
+        - alert: CPUPercentegeInNodes
+          expr: sum by (node) (rate(container_cpu_usage_seconds_total{id="/system.slice"}[5m])) / sum by (node) (kube_node_status_capacity{resource="cpu"} - kube_node_status_allocatable{resource="cpu"}) >= .10
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High CPU usage detected on node {{ $labels.node }}."
+            message: "The CPU usage on node {{ $labels.node }} is above 70%."
+            description: "The CPU usage on node {{ $labels.node }} is above 70%."
+        - alert: MemoryPercentegeInNodes
+          expr: sum by (node) (container_memory_rss{id="/system.slice/kubelet.service"}) / sum by (node) (kube_node_status_capacity{resource="memory"} - kube_node_status_allocatable{resource="memory"}) >= .10
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High memory usage detected on node {{ $labels.node }}."
+            message: "The memory usage on node {{ $labels.node }} is above 70%."
+            description: "The memory usage on node {{ $labels.node }} is above 70%."
