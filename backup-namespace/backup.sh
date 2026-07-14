@@ -9,6 +9,12 @@ echo "Fetching namespaces..."
 namespaces=$(oc get ns -o jsonpath='{.items[*].metadata.name}')
 
 for ns in $namespaces; do
+    # Exclude default and any namespace starting with kube* or openshift*
+    if [[ "$ns" == kube* || "$ns" == openshift* ]]; then
+        echo "Skipping namespace: $ns"
+        continue
+    fi
+
     ns_dir="${BASE_DIR}/${ns}"
     mkdir -p "$ns_dir"
     echo "Inspecting namespace: $ns -> $ns_dir"
