@@ -1,0 +1,12 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: acs-link
+spec:
+  href: 'https://central-rhacs-operator.apps.cluster-4tcz5.4tcz5.sandbox1142.opentlc.com'
+  location: ApplicationMenu
+  text: ACS
+  applicationMenu:
+    section: tools
+    # image that is 24x24 in size
+    imageURL: https://via.placeholder.com/24
