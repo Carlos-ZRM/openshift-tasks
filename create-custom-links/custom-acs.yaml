@@ -1,0 +1,18 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"console.openshift.io/v1","kind":"ConsoleLink","metadata":{"annotations":{},"name":"acs-link"},"spec":{"applicationMenu":{"imageURL":"https://via.placeholder.com/24","section":"tools"},"href":"https://central-rhacs-operator.apps.cluster-4tcz5.4tcz5.sandbox1142.opentlc.com","location":"ApplicationMenu","text":"ACS"}}
+  creationTimestamp: "2026-07-28T05:35:15Z"
+  generation: 1
+  name: acs-link
+  resourceVersion: "599195"
+  uid: c7610911-867c-4ccb-bdb5-b90485e842af
+spec:
+  applicationMenu:
+    imageURL: https://via.placeholder.com/24
+    section: tools
+  href: https://central-rhacs-operator.apps.cluster-4tcz5.4tcz5.sandbox1142.opentlc.com
+  location: ApplicationMenu
+  text: ACS
