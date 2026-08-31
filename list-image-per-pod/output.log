@@ -1,0 +1,2780 @@
+==========================================================
+ NAMESPACE: assisted-installer
+
+POD: assisted-installer-controller-mrffb
+  - CONTAINER: assisted-installer-controller
+    IMAGE:     registry.redhat.io/rhai/assisted-installer-controller-rhel9:019fed042d5aff7e5d390f00d4e4e8a712e4da40
+
+
+==========================================================
+ NAMESPACE: cert-manager
+
+POD: acme-bifrost-webhook-5f799fd89b-dbkln
+  - CONTAINER: webhook
+    IMAGE:     quay.io/rhpds/acme-bifrost-webhook:v0.2.28
+
+POD: cert-manager-69f688d49c-vq8lm
+  - CONTAINER: cert-manager-controller
+    IMAGE:     registry.redhat.io/cert-manager/jetstack-cert-manager-rhel9@sha256:f3683d29aa703829fb0d0ba93711188fb717cc1ac156877c9d0ab5fb5083513f
+
+POD: cert-manager-cainjector-68588f9-45zr9
+  - CONTAINER: cert-manager-cainjector
+    IMAGE:     registry.redhat.io/cert-manager/jetstack-cert-manager-rhel9@sha256:f3683d29aa703829fb0d0ba93711188fb717cc1ac156877c9d0ab5fb5083513f
+
+POD: cert-manager-webhook-844fcc87cf-4kcpx
+  - CONTAINER: cert-manager-webhook
+    IMAGE:     registry.redhat.io/cert-manager/jetstack-cert-manager-rhel9@sha256:f3683d29aa703829fb0d0ba93711188fb717cc1ac156877c9d0ab5fb5083513f
+
+
+==========================================================
+ NAMESPACE: cert-manager-operator
+
+POD: cert-manager-operator-controller-manager-7b8d698d89-k6bpz
+  - CONTAINER: cert-manager-operator
+    IMAGE:     registry.redhat.io/cert-manager/cert-manager-operator-rhel9@sha256:d8a14cf03a7872a88dd61e1aa6b2a84ce031a2044d0d4d129154041a1adaa481
+
+
+==========================================================
+ NAMESPACE: default
+
+
+==========================================================
+ NAMESPACE: keycloak
+
+POD: keycloak-0
+  - CONTAINER: keycloak
+    IMAGE:     registry.redhat.io/rhbk/keycloak-rhel9@sha256:2e3dde83454dc4d7ade2b6710f441bdbee42d9942f076c61f9e3f992a794feaa
+
+POD: keycloak-pgsql-78f5b5d88-gsp8f
+  - CONTAINER: pgsql
+    IMAGE:     registry.redhat.io/rhel9/postgresql-16:1-1754433677
+
+POD: rhbk-operator-5b7cc54578-pgbm5
+  - CONTAINER: rhbk-operator
+    IMAGE:     registry.redhat.io/rhbk/keycloak-rhel9-operator@sha256:0dbf173cd30f78d5333aafdbbfeb6fded59f7ee0d9ae74ef9eb2dd79efed1337
+
+POD: sso-v55l8
+  - CONTAINER: keycloak
+    IMAGE:     registry.redhat.io/rhbk/keycloak-rhel9@sha256:2e3dde83454dc4d7ade2b6710f441bdbee42d9942f076c61f9e3f992a794feaa
+
+
+==========================================================
+ NAMESPACE: kube-node-lease
+
+
+==========================================================
+ NAMESPACE: kube-public
+
+
+==========================================================
+ NAMESPACE: kube-system
+
+
+==========================================================
+ NAMESPACE: openshift
+
+
+==========================================================
+ NAMESPACE: openshift-apiserver
+
+POD: apiserver-78dff46dbd-7sxrq
+  - CONTAINER: openshift-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7521ac31d20c119696a3124f66a7d2561026af803ac319cf57b0e5ff16aba61f
+  - CONTAINER: openshift-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: apiserver-78dff46dbd-wvhlf
+  - CONTAINER: openshift-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7521ac31d20c119696a3124f66a7d2561026af803ac319cf57b0e5ff16aba61f
+  - CONTAINER: openshift-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: apiserver-78dff46dbd-wwzhz
+  - CONTAINER: openshift-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7521ac31d20c119696a3124f66a7d2561026af803ac319cf57b0e5ff16aba61f
+  - CONTAINER: openshift-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+
+==========================================================
+ NAMESPACE: openshift-apiserver-operator
+
+POD: openshift-apiserver-operator-64fdffb7c7-b5r62
+  - CONTAINER: openshift-apiserver-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4a235c45034f5d4b641f950f04dd43eda0206ddbe8f19ff35efbef8e2be1a202
+
+
+==========================================================
+ NAMESPACE: openshift-authentication
+
+POD: oauth-openshift-9ff7757f-7n9cq
+  - CONTAINER: oauth-openshift
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:89b629d8a07f90dc0095bc0d1e88a172a9673534a1e75842e7d256f2ae939b95
+
+POD: oauth-openshift-9ff7757f-8vc4c
+  - CONTAINER: oauth-openshift
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:89b629d8a07f90dc0095bc0d1e88a172a9673534a1e75842e7d256f2ae939b95
+
+POD: oauth-openshift-9ff7757f-cgbpt
+  - CONTAINER: oauth-openshift
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:89b629d8a07f90dc0095bc0d1e88a172a9673534a1e75842e7d256f2ae939b95
+
+
+==========================================================
+ NAMESPACE: openshift-authentication-operator
+
+POD: authentication-operator-7b7cbc8c59-4bcfm
+  - CONTAINER: authentication-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9b3186b954c1bbd895826ba5785577d88b1344fab7ac4936b77cb45da24e6df0
+
+
+==========================================================
+ NAMESPACE: openshift-catalogd
+
+POD: catalogd-controller-manager-98459bc5d-kd795
+  - CONTAINER: manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:63da5e30db604d519c92fe27bb2602aaffd9e62679f0d071f5199335dac6fa33
+
+
+==========================================================
+ NAMESPACE: openshift-cloud-controller-manager
+
+
+==========================================================
+ NAMESPACE: openshift-cloud-controller-manager-operator
+
+POD: cluster-cloud-controller-manager-operator-68cddc8f77-mcm8g
+  - CONTAINER: cluster-cloud-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:721bf6ecf31f1c5e78f50a60734c0945d5ecac4c6a8b899a455dda4ea037e019
+  - CONTAINER: config-sync-controllers
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:721bf6ecf31f1c5e78f50a60734c0945d5ecac4c6a8b899a455dda4ea037e019
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+
+==========================================================
+ NAMESPACE: openshift-cloud-credential-operator
+
+POD: cloud-credential-operator-5d8c778bd6-sxvz4
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: cloud-credential-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cc82d75d27f8f8ce29e0778d0c6dd9e305fd099664c48762772e6c67b86c42ae
+
+
+==========================================================
+ NAMESPACE: openshift-cloud-network-config-controller
+
+
+==========================================================
+ NAMESPACE: openshift-cloud-platform-infra
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-csi-drivers
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-machine-approver
+
+POD: machine-approver-5b55996b-hhjz6
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: machine-approver-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:086f9c262b991e25d3c2f62d5af452e692cbfa1392e0ecc46eb3a3c32c2120af
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-node-tuning-operator
+
+POD: cluster-node-tuning-operator-f94dc67c4-8zsmr
+  - CONTAINER: cluster-node-tuning-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-48ctl
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-6v6kl
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-bj5nm
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-bph9n
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-jckbp
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-sq8k5
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+POD: tuned-t559m
+  - CONTAINER: tuned
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbde3e63c140933e75f48ae71da1f610172b8d99f5c78e9d8ccbcedbc7e17d43
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-olm-operator
+
+POD: cluster-olm-operator-6cd558d548-42zmd
+  - CONTAINER: cluster-olm-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1a4054f60440a8c1a0f04f3b44d4bcc5c7ea3d44ac7d1210c0149c6f44b2ff48
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-samples-operator
+
+POD: cluster-samples-operator-6db5594957-rzlbc
+  - CONTAINER: cluster-samples-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24f24635c3f308c3b6c8722841976caab4dc88af73a7eadb86038316f90b3129
+  - CONTAINER: cluster-samples-operator-watch
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24f24635c3f308c3b6c8722841976caab4dc88af73a7eadb86038316f90b3129
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-storage-operator
+
+POD: cluster-storage-operator-6dc8f54bf8-7btwz
+  - CONTAINER: cluster-storage-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:559418aaa173b7307566a60c44447fbb602142ce3c1a1b1be5bb2361ec8a6401
+
+POD: csi-snapshot-controller-65bc8cd79c-9l8vs
+  - CONTAINER: snapshot-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8aefa2e28847a73f1439b62b8fbbf76bc3c52e89e7437c083bf15bc3ca8178d1
+
+POD: csi-snapshot-controller-65bc8cd79c-jcxj9
+  - CONTAINER: snapshot-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8aefa2e28847a73f1439b62b8fbbf76bc3c52e89e7437c083bf15bc3ca8178d1
+
+POD: csi-snapshot-controller-operator-557855b5b6-kqmr2
+  - CONTAINER: csi-snapshot-controller-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8f5683329342872a8ddb05ef9d795bf7c00d4edc0261a36a2133f8b79866fea4
+
+POD: volume-data-source-validator-6c7bc9f9b-4v8zn
+  - CONTAINER: volume-data-source-validator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:38ac2d6b5ef3cc0631ba83f339543d9e7857258adcd57045d8bde09ac5855731
+
+
+==========================================================
+ NAMESPACE: openshift-cluster-version
+
+POD: cluster-version-operator-b849d9dcc-rsvwr
+  - CONTAINER: cluster-version-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-release@sha256:237dafe3f2d26e355372001ae957748211bd4bae8249b48fe2624159cfdc8265
+
+
+==========================================================
+ NAMESPACE: openshift-config
+
+
+==========================================================
+ NAMESPACE: openshift-config-managed
+
+
+==========================================================
+ NAMESPACE: openshift-config-operator
+
+POD: openshift-config-operator-5b7f6fb977-pj5j5
+  - CONTAINER: openshift-config-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:85bffc84f00b2940a705a1cc3393e7b028fdef7318e5595b5ed1476d3bd367b6
+
+
+==========================================================
+ NAMESPACE: openshift-console
+
+POD: console-5c79b4fb7b-st87n
+  - CONTAINER: console
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:186ad074907e14dd85039cdbbfd941f5bd73ab66a34f31c8e37cc07e40f20c33
+
+POD: console-5c79b4fb7b-w9fhh
+  - CONTAINER: console
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:186ad074907e14dd85039cdbbfd941f5bd73ab66a34f31c8e37cc07e40f20c33
+
+POD: downloads-5c9d9bc4d6-8kl7f
+  - CONTAINER: download-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f3dcde4a217d2bd371897a46b2755119ddc006a4074b238a3100531697aa1b57
+
+POD: downloads-5c9d9bc4d6-mtlwm
+  - CONTAINER: download-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f3dcde4a217d2bd371897a46b2755119ddc006a4074b238a3100531697aa1b57
+
+
+==========================================================
+ NAMESPACE: openshift-console-operator
+
+POD: console-operator-6c7545894c-tnlq8
+  - CONTAINER: console-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8b9f3d547bb642f6748fee806c444421f88350993ff7a4248e5f3693eb14989
+
+
+==========================================================
+ NAMESPACE: openshift-console-user-settings
+
+
+==========================================================
+ NAMESPACE: openshift-controller-manager
+
+POD: controller-manager-b9cd44547-6fnwn
+  - CONTAINER: controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2930845f7daff1d7ca723b833cedd39335b0f2ae23bf3d77f73ee2b8bc8a295
+
+POD: controller-manager-b9cd44547-6l882
+  - CONTAINER: controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2930845f7daff1d7ca723b833cedd39335b0f2ae23bf3d77f73ee2b8bc8a295
+
+POD: controller-manager-b9cd44547-v5zt6
+  - CONTAINER: controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2930845f7daff1d7ca723b833cedd39335b0f2ae23bf3d77f73ee2b8bc8a295
+
+
+==========================================================
+ NAMESPACE: openshift-controller-manager-operator
+
+POD: openshift-controller-manager-operator-67875c5db7-5r7tr
+  - CONTAINER: openshift-controller-manager-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3e67047b344a0a7bfb4f6c495b3c6aeab70892e653ef95ea692ad828ca5e4942
+
+
+==========================================================
+ NAMESPACE: openshift-debug-dtnxn
+
+
+==========================================================
+ NAMESPACE: openshift-debug-kt6qk
+
+
+==========================================================
+ NAMESPACE: openshift-debug-mpcwn
+
+
+==========================================================
+ NAMESPACE: openshift-debug-zqmq6
+
+
+==========================================================
+ NAMESPACE: openshift-dns
+
+POD: dns-default-299v4
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-58vr4
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-6bhwn
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-85ffw
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-htdqs
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-ztjs4
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: dns-default-zxmld
+  - CONTAINER: dns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-resolver-7xmqt
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-drh9m
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-drwrs
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-hprvk
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-hql82
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-lb88w
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: node-resolver-tps2f
+  - CONTAINER: dns-node-resolver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+
+==========================================================
+ NAMESPACE: openshift-dns-operator
+
+POD: dns-operator-54df548d5d-7qbkx
+  - CONTAINER: dns-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b4ac3561905f597ba53506622d37ffce3be7c5cbfd4938ea71982849d650b35f
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+
+==========================================================
+ NAMESPACE: openshift-etcd
+
+POD: etcd-control-plane-cluster-z98cw-1
+  - CONTAINER: etcdctl
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+  - CONTAINER: etcd-rev
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: etcd-control-plane-cluster-z98cw-2
+  - CONTAINER: etcdctl
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+  - CONTAINER: etcd-rev
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: etcd-control-plane-cluster-z98cw-3
+  - CONTAINER: etcdctl
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:59869a55076bd46bf4c4c31f3da95b7222e86fe1d0f97a8a4da25c433391ae97
+  - CONTAINER: etcd-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+  - CONTAINER: etcd-rev
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: etcd-guard-control-plane-cluster-z98cw-1
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: etcd-guard-control-plane-cluster-z98cw-2
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: etcd-guard-control-plane-cluster-z98cw-3
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: installer-10-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: installer-10-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: installer-10-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: installer-8-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+
+==========================================================
+ NAMESPACE: openshift-etcd-operator
+
+POD: etcd-operator-596994f675-9wflj
+  - CONTAINER: etcd-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eff97bd9b93ec2a03b77a49a37d8b909dc60316964d3e113d1439b4d81f3fcc6
+
+
+==========================================================
+ NAMESPACE: openshift-file-integrity
+
+POD: file-integrity-operator-546c48f56f-h4zmr
+  - CONTAINER: file-integrity-operator
+    IMAGE:     registry.redhat.io/compliance/openshift-file-integrity-rhel8-operator@sha256:627ef29a0a3288a31a036da3c3628c5a47ce243c3b671c7288f25dddcb6ff8ae
+
+
+==========================================================
+ NAMESPACE: openshift-gitops
+
+POD: cluster-df95c8b76-vb4x6
+  - CONTAINER: cluster
+    IMAGE:     registry.redhat.io/openshift-gitops-1/gitops-rhel9@sha256:36a54bd16da5c4ddd09edcce72942e92d4d18533453bd1e93aee3261ace6949c
+
+POD: gitops-plugin-794f64b6c9-rt5k7
+  - CONTAINER: gitops-plugin
+    IMAGE:     registry.redhat.io/openshift-gitops-1/console-plugin-rhel9@sha256:a87a5e273a4b47e0d4ac8a6fdad7e74abef7ce93e8250623927004d4d1fc09a0
+
+POD: openshift-gitops-application-controller-0
+  - CONTAINER: argocd-application-controller
+    IMAGE:     registry.redhat.io/openshift-gitops-1/argocd-rhel9@sha256:deda478bd4d845e08dd25fb839e1c15d7d4507a397c7184c90b4f78d19410e05
+
+POD: openshift-gitops-applicationset-controller-6fcd6bc549-cpsjk
+  - CONTAINER: argocd-applicationset-controller
+    IMAGE:     registry.redhat.io/openshift-gitops-1/argocd-rhel9@sha256:deda478bd4d845e08dd25fb839e1c15d7d4507a397c7184c90b4f78d19410e05
+
+POD: openshift-gitops-dex-server-5df657bc69-5mffd
+  - CONTAINER: dex
+    IMAGE:     registry.redhat.io/openshift-gitops-1/dex-rhel9@sha256:51454e5c706fd913503980d29a11ab233e3d0b82d319b23d46394612dd81d3ff
+
+POD: openshift-gitops-redis-69fbbbc467-7vbg5
+  - CONTAINER: redis
+    IMAGE:     registry.redhat.io/rhel9/redis-7@sha256:d4865f7560b555f366db86b6097568e02163fed131f765352d46d9478e59f5d6
+
+POD: openshift-gitops-repo-server-59f57d67f6-5x94g
+  - CONTAINER: argocd-repo-server
+    IMAGE:     registry.redhat.io/openshift-gitops-1/argocd-rhel9@sha256:deda478bd4d845e08dd25fb839e1c15d7d4507a397c7184c90b4f78d19410e05
+
+POD: openshift-gitops-server-8678d7b547-cbv9p
+  - CONTAINER: argocd-server
+    IMAGE:     registry.redhat.io/openshift-gitops-1/argocd-rhel9@sha256:deda478bd4d845e08dd25fb839e1c15d7d4507a397c7184c90b4f78d19410e05
+
+
+==========================================================
+ NAMESPACE: openshift-gitops-operator
+
+POD: openshift-gitops-operator-controller-manager-6c8b6d75f6-f7v9g
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/openshift-gitops-1/gitops-rhel9-operator@sha256:ec145c44990edf0ee098ea6552a4c6c120c66e725efe6fdd4933d6051602dbf6
+
+
+==========================================================
+ NAMESPACE: openshift-host-network
+
+
+==========================================================
+ NAMESPACE: openshift-image-registry
+
+POD: cluster-image-registry-operator-59d75d66bd-knxdb
+  - CONTAINER: cluster-image-registry-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:91f8e853a6db2f5f898ad13d7dff8bab4e3e9cfe9e86f157a21c3d2cf93107c6
+
+POD: image-pruner-29792160-gpwhb
+  - CONTAINER: image-pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: image-pruner-29793600-6hzqp
+  - CONTAINER: image-pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: image-registry-5f759bd59d-cwm99
+  - CONTAINER: registry
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-2g67s
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-cppjm
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-n56pt
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-sgwtt
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-slvjk
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-tqs46
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+POD: node-ca-zglt9
+  - CONTAINER: node-ca
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8268b99a575d285c8cac44e33a30647b658937f99946ff7bd4dd29dd38dd3342
+
+
+==========================================================
+ NAMESPACE: openshift-infra
+
+
+==========================================================
+ NAMESPACE: openshift-ingress
+
+POD: router-default-686c4998bb-22vsn
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-6mn4p
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-dswkd
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-fvjsq
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-g5ch7
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-k5xmv
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+POD: router-default-686c4998bb-pq86f
+  - CONTAINER: router
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+
+
+==========================================================
+ NAMESPACE: openshift-ingress-canary
+
+POD: ingress-canary-gc8jl
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-ht2lz
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-lb24p
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-m2lpg
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-ml4vj
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-n44rw
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+POD: ingress-canary-tvz4h
+  - CONTAINER: serve-healthcheck-canary
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+
+
+==========================================================
+ NAMESPACE: openshift-ingress-operator
+
+POD: ingress-operator-5c77d588fd-dsf8h
+  - CONTAINER: ingress-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:58bf55c7227acc25693f92527d5f5dcef81ec62d54c8b8cb1db3907e9a7305a7
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+
+==========================================================
+ NAMESPACE: openshift-insights
+
+POD: insights-operator-5c9bbb9567-z6cb5
+  - CONTAINER: insights-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483687448a649a9ef84f0b01992ebf8310007a4ece4c9bddf8d20f310c9470d1
+
+POD: insights-runtime-extractor-4mgg8
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-5b4kg
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-5j9gk
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-5mg65
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-mf955
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-nqw2j
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+POD: insights-runtime-extractor-xvtfh
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0906c38adaf40442a85ff2df148dee8488a46fb3201a63a08aced5a1624604d1
+  - CONTAINER: extractor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bbcc127598ef3173f0e6861c66596312968cccff07e25b33b743a0a7a11ef277
+
+
+==========================================================
+ NAMESPACE: openshift-kni-infra
+
+POD: coredns-control-plane-cluster-z98cw-1
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-control-plane-cluster-z98cw-2
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-control-plane-cluster-z98cw-3
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-worker-cluster-z98cw-1
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-worker-cluster-z98cw-2
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-worker-cluster-z98cw-3
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: coredns-worker-cluster-z98cw-4
+  - CONTAINER: coredns
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:24be5d0b0f1947bca2baefdb8e167884253fde8e130c95a1cf608660ee76cc1a
+  - CONTAINER: coredns-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: haproxy-control-plane-cluster-z98cw-1
+  - CONTAINER: haproxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+  - CONTAINER: haproxy-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: haproxy-control-plane-cluster-z98cw-2
+  - CONTAINER: haproxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+  - CONTAINER: haproxy-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: haproxy-control-plane-cluster-z98cw-3
+  - CONTAINER: haproxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f8786d982ef5ce14b17875d73b3882d273fe059ca03df850443dffbd91d94032
+  - CONTAINER: haproxy-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-control-plane-cluster-z98cw-1
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-control-plane-cluster-z98cw-2
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-control-plane-cluster-z98cw-3
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-worker-cluster-z98cw-1
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-worker-cluster-z98cw-2
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-worker-cluster-z98cw-3
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+POD: keepalived-worker-cluster-z98cw-4
+  - CONTAINER: keepalived
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2a494d4791e679eb686b05e377936b79c4e94b7406f3f0664c0c69376746eb68
+  - CONTAINER: keepalived-monitor
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:072ef47d31f371153873d687784325e958f1863ce1a22aa6a19907b4cbd01f6f
+
+
+==========================================================
+ NAMESPACE: openshift-kube-apiserver
+
+POD: installer-10-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-10-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-10-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-11-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-11-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-11-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-7-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-7-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-7-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-8-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-8-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-8-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-9-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-9-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: installer-9-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-control-plane-cluster-z98cw-1
+  - CONTAINER: kube-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-apiserver-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-cert-regeneration-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-insecure-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-control-plane-cluster-z98cw-2
+  - CONTAINER: kube-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-apiserver-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-cert-regeneration-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-insecure-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-control-plane-cluster-z98cw-3
+  - CONTAINER: kube-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-apiserver-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-cert-regeneration-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-insecure-readyz
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+  - CONTAINER: kube-apiserver-check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-guard-control-plane-cluster-z98cw-1
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-guard-control-plane-cluster-z98cw-2
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: kube-apiserver-guard-control-plane-cluster-z98cw-3
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-10-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-11-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-11-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-11-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-8-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-8-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-8-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-9-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-9-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+POD: revision-pruner-9-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+
+==========================================================
+ NAMESPACE: openshift-kube-apiserver-operator
+
+POD: kube-apiserver-operator-6d49d764c-zv9c6
+  - CONTAINER: kube-apiserver-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08112bf14aa97f6ec75f7d734138be5096219f75cea7b0ff9b3b15801fda9f3c
+
+
+==========================================================
+ NAMESPACE: openshift-kube-controller-manager
+
+POD: installer-4-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-4-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-5-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-5-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-5-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-6-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-6-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-6-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-7-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-7-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-8-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-8-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: installer-8-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-control-plane-cluster-z98cw-1
+  - CONTAINER: kube-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: cluster-policy-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c74edd620dc5a8d54e7a1b8e35908df8936be3db9b884cb3313e84f3f31d0d4d
+  - CONTAINER: kube-controller-manager-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+  - CONTAINER: kube-controller-manager-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-control-plane-cluster-z98cw-2
+  - CONTAINER: kube-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: cluster-policy-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c74edd620dc5a8d54e7a1b8e35908df8936be3db9b884cb3313e84f3f31d0d4d
+  - CONTAINER: kube-controller-manager-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+  - CONTAINER: kube-controller-manager-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-control-plane-cluster-z98cw-3
+  - CONTAINER: kube-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: cluster-policy-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c74edd620dc5a8d54e7a1b8e35908df8936be3db9b884cb3313e84f3f31d0d4d
+  - CONTAINER: kube-controller-manager-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+  - CONTAINER: kube-controller-manager-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-guard-control-plane-cluster-z98cw-1
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-guard-control-plane-cluster-z98cw-2
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+POD: kube-controller-manager-guard-control-plane-cluster-z98cw-3
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+
+==========================================================
+ NAMESPACE: openshift-kube-controller-manager-operator
+
+POD: kube-controller-manager-operator-667b47cd87-5psn6
+  - CONTAINER: kube-controller-manager-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9939b708c6a22a937e03a7a458450014dae6ae1eb2542aea04e1a0379f75386b
+
+
+==========================================================
+ NAMESPACE: openshift-kube-scheduler
+
+POD: installer-3-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-3-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-4-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-4-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-5-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-5-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-5-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-6-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-7-control-plane-cluster-z98cw-1
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-7-control-plane-cluster-z98cw-2
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: installer-7-control-plane-cluster-z98cw-3
+  - CONTAINER: installer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-control-plane-cluster-z98cw-1
+  - CONTAINER: kube-scheduler
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-scheduler-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+  - CONTAINER: kube-scheduler-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-control-plane-cluster-z98cw-2
+  - CONTAINER: kube-scheduler
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-scheduler-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+  - CONTAINER: kube-scheduler-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-control-plane-cluster-z98cw-3
+  - CONTAINER: kube-scheduler
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08eb128187b57bccc0b9d5f96883156a4be718aa2242dcbdb31fb997a88e94c7
+  - CONTAINER: kube-scheduler-cert-syncer
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+  - CONTAINER: kube-scheduler-recovery-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-guard-control-plane-cluster-z98cw-1
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-guard-control-plane-cluster-z98cw-2
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: openshift-kube-scheduler-guard-control-plane-cluster-z98cw-3
+  - CONTAINER: guard
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-1
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-2
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+POD: revision-pruner-7-control-plane-cluster-z98cw-3
+  - CONTAINER: pruner
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+
+==========================================================
+ NAMESPACE: openshift-kube-scheduler-operator
+
+POD: openshift-kube-scheduler-operator-74bd84cbd7-m6dcd
+  - CONTAINER: kube-scheduler-operator-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:37705a8afe325304474fc831d5bb6688ded8a16e0ef32e2fa190c2bba3d44835
+
+
+==========================================================
+ NAMESPACE: openshift-kube-storage-version-migrator
+
+POD: migrator-855f4f9d97-fvp4t
+  - CONTAINER: migrator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:be00ee7b50c03506dde27f74df1b7b2549ddfa8c5e974cc27fa63feb6b975e8d
+  - CONTAINER: graceful-termination
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:be00ee7b50c03506dde27f74df1b7b2549ddfa8c5e974cc27fa63feb6b975e8d
+
+
+==========================================================
+ NAMESPACE: openshift-kube-storage-version-migrator-operator
+
+POD: kube-storage-version-migrator-operator-7b75768c45-tc6ph
+  - CONTAINER: kube-storage-version-migrator-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:df1cb5449c7fc97932c0814007c8814514f37beaca2e6305d1d4f192e9d5e2bd
+
+
+==========================================================
+ NAMESPACE: openshift-machine-api
+
+POD: cluster-autoscaler-operator-5cc659c9bc-vd5qp
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: cluster-autoscaler-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:60bf9baa5b51ba0b197506f28d8cadb5d4f046a42ef52e2d17a33e27eaed98e8
+
+POD: cluster-baremetal-operator-78f7fd9d96-xz2jk
+  - CONTAINER: cluster-baremetal-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3128c3adcfaf7ca779af8e46aeaab3cd94c6f5df557056c2930ad32f93eb70d2
+  - CONTAINER: baremetal-kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: control-plane-machine-set-operator-577cd4796b-xwv2s
+  - CONTAINER: control-plane-machine-set-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b0f7d06dc6a201e4ee595601608f9fe1539d18bf9a970f9f839250cc3e83fdd2
+
+POD: ironic-proxy-26psn
+  - CONTAINER: ironic-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+
+POD: ironic-proxy-dgrbq
+  - CONTAINER: ironic-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+
+POD: ironic-proxy-rvxzg
+  - CONTAINER: ironic-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+
+POD: machine-api-controllers-f447dbfd6-bn4vc
+  - CONTAINER: machineset-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb4e4bf2dde46c987646c4554fea1e069e8d5344c6774f247548f5cbb61b0185
+  - CONTAINER: machine-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fbea823af1e1013f3f379b702c9389f65ace76249d3a447aba82aa1fcc6324c
+  - CONTAINER: nodelink-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb4e4bf2dde46c987646c4554fea1e069e8d5344c6774f247548f5cbb61b0185
+  - CONTAINER: machine-healthcheck-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb4e4bf2dde46c987646c4554fea1e069e8d5344c6774f247548f5cbb61b0185
+  - CONTAINER: kube-rbac-proxy-machineset-mtrc
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-machine-mtrc
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-mhc-mtrc
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-api-operator-559b6f7c6d-76j47
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: machine-api-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb4e4bf2dde46c987646c4554fea1e069e8d5344c6774f247548f5cbb61b0185
+
+POD: metal3-9b49cd77f-ddxvf
+  - CONTAINER: metal3-httpd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+  - CONTAINER: metal3-ironic
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+  - CONTAINER: metal3-ramdisk-logs
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:123eafe0dc9ce4390b823ed11a6ed01c6869d50d4ebd281e168e83c1041adaa8
+
+POD: metal3-baremetal-operator-5d78457497-tv8lx
+  - CONTAINER: metal3-baremetal-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:18229a717ef2340c679eae1652ac7a48664efef08b74ceb2241aeb2f604a8ab6
+
+POD: metal3-image-customization-8476fddbcd-64qjc
+  - CONTAINER: machine-image-customization-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9f54641ba5afc3017e29c7f1c7c6a51bbb53832fcc6c456a73cba205a9b9fef0
+
+
+==========================================================
+ NAMESPACE: openshift-machine-config-operator
+
+POD: kube-rbac-proxy-crio-control-plane-cluster-z98cw-1
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-control-plane-cluster-z98cw-2
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-control-plane-cluster-z98cw-3
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-worker-cluster-z98cw-1
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-worker-cluster-z98cw-2
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-worker-cluster-z98cw-3
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: kube-rbac-proxy-crio-worker-cluster-z98cw-4
+  - CONTAINER: kube-rbac-proxy-crio
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-controller-54669995cd-9vp4w
+  - CONTAINER: machine-config-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-6xqmd
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-9jzpm
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-cp5g7
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-hmxm2
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-nhlt8
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-nmsnk
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-daemon-ttsnq
+  - CONTAINER: machine-config-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-nodes-crd-cleanup-29790999-ktdn4
+  - CONTAINER: crd-cleanup
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2cea4c2083ea4ed23d55315ff68a8e3ab68a0c2390df5278d5081d899a116063
+
+POD: machine-config-operator-8dfc9747b-n6ggt
+  - CONTAINER: machine-config-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: machine-config-server-56mbk
+  - CONTAINER: machine-config-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+
+POD: machine-config-server-htwjj
+  - CONTAINER: machine-config-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+
+POD: machine-config-server-nvssp
+  - CONTAINER: machine-config-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3e987919050a8de4770353c5097cdc8d39be7de81ca8895f153c87536304f04
+
+
+==========================================================
+ NAMESPACE: openshift-marketplace
+
+POD: 17d330daa12db1169c0e5e1f6923c8c2b32703e8241a04d52824180568xpwf8
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 4366a84ab60829ccb7d422d1f6d216d670d1b6f6a00f94ae878715b09fw5957
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 4ce5035817f6380951bec4aa47d619cc069bc79c02f51e14f8346ed800q4hnn
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 4cfb4e04aa45f98c6298e3ea3d8719192c70aa475b6f117e6a3ab06b0bt5js4
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 5701726af7b3b4bfc8b486ef6990bbdd2a753bfaa45f0e6f419d370b91l59mt
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 6071737ba65a72cfc202ef8c49d8cd869f21ec804fabcfad573681f1fbq9q7l
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 61ff938028256d908f26338e4ce4596f12bf1a5e7f6f0c6a924cbe28515zx8v
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 685f1ed643dcce69727e2826bbf9be585096b4cf774051b5daa5e675402pnhx
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 68a14a8cd8b785429a9d1022191e61f10caf3a28dd4aac8e1f3c43df81q65r4
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 73987640425141a2e6f3f47a284cdbb051078219905d88359e1866b4e28rhqh
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 8ed6dd9b706e7c66ec8c090d15d42beda82d0c4ae5ecd502dbdd259ce4nnhrs
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 95a250ece843aeb1b06692bc063e9f589c1c9e80c984810fab983242e5m7x62
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: 9f8731d99e6c091277dc5d8af3af5cf976b3094a406d378879c507cda4frlnt
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: acc488aed889289e1195d7489d19cc993a1ebe59cfca610fee86b5eea9vxm6x
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: ba6b092c92da1b344e7e48666ff47be369591c8df1c24745c37b0a97a38p9qt
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: cb81f02887eb9bd94ddc703dfa0e2f4ed54e8c79713d91906ae93f09d34sw2w
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: certified-operators-cdj6w
+  - CONTAINER: registry-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: community-operators-ltg9q
+  - CONTAINER: registry-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: dbd8c42f5c065d33341359ae3b956122ee2911df88d937151e8efec2a3c2x6q
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: dc37d351de87cbf6f937eb17dac84acd7359bd6c127b817af1a6f9f5e42vf28
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: f03703e56e72d7a7b3c0c844524f2aa4022609521fb828357b46630dcfv4n6z
+  - CONTAINER: extract
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: marketplace-operator-795f889878-fbpgf
+  - CONTAINER: marketplace-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:552e524246e8c8465036f6c534060dc66e45113f4711ab4af92027ff6ed1853c
+
+POD: redhat-marketplace-4lmsm
+  - CONTAINER: registry-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+POD: redhat-operators-67wz6
+  - CONTAINER: registry-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d64f75ecf3194e4df284a262f99c8e2ef4c9e77084e510874377cf5a36a0d3b6
+
+
+==========================================================
+ NAMESPACE: openshift-monitoring
+
+POD: alertmanager-main-0
+  - CONTAINER: alertmanager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d3685a760589788c52ffdad7abff9b896552536535d17f33d1d6eebdbbae2959
+  - CONTAINER: config-reloader
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483e38f6d4cb8c465b2cd15f13cd9e82a9e05de90bff08635d10f35fa22766b8
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-metric
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: prom-label-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:175057183eba3e92f57f45a47ea697da7fdbeb45b1cf933e7c5b8570da973458
+
+POD: alertmanager-main-1
+  - CONTAINER: alertmanager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d3685a760589788c52ffdad7abff9b896552536535d17f33d1d6eebdbbae2959
+  - CONTAINER: config-reloader
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483e38f6d4cb8c465b2cd15f13cd9e82a9e05de90bff08635d10f35fa22766b8
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-metric
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: prom-label-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:175057183eba3e92f57f45a47ea697da7fdbeb45b1cf933e7c5b8570da973458
+
+POD: cluster-monitoring-operator-6d9598cf7b-9bznw
+  - CONTAINER: cluster-monitoring-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7c845d70c166e6cf58af93cca9795af71b5f148bb8714fe5b9d37efc370e7497
+
+POD: kube-state-metrics-58cf564f76-jshfq
+  - CONTAINER: kube-state-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:545c27caf806b01d2ccdd3cb9d50412defe2ca312556987176eee97ea7b7fa7c
+  - CONTAINER: kube-rbac-proxy-main
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-self
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: metrics-server-74c7d5579c-lqzwk
+  - CONTAINER: metrics-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:518da93432b9bc8725e79864c2e888b564a3ed9a160582d8658990ee428e37fc
+
+POD: metrics-server-74c7d5579c-sxjkr
+  - CONTAINER: metrics-server
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:518da93432b9bc8725e79864c2e888b564a3ed9a160582d8658990ee428e37fc
+
+POD: monitoring-plugin-7bd6c76874-hb7cv
+  - CONTAINER: monitoring-plugin
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c206feb0290e1feffe5a23fb698eec7e5de5aaad4fc50a26bbd835574fc60407
+
+POD: monitoring-plugin-7bd6c76874-p6f6n
+  - CONTAINER: monitoring-plugin
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c206feb0290e1feffe5a23fb698eec7e5de5aaad4fc50a26bbd835574fc60407
+
+POD: node-exporter-5xwx9
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-8f246
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-cwz42
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-mc2t5
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-mrgw9
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-qg4nj
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: node-exporter-smqcw
+  - CONTAINER: node-exporter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b625a99782eb5a1ee948fe4aa94eadb6ec32e120421900cc199527b4d34c3a0e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: openshift-state-metrics-6fb596db6f-6pgwq
+  - CONTAINER: kube-rbac-proxy-main
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-self
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: openshift-state-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f59ca311a1e6d9c9708aa6adf861bfd95614c2cf08728f6b5c478720865dffc6
+
+POD: prometheus-k8s-0
+  - CONTAINER: prometheus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8f59abefe5f19b2948160513f643207e7bdb2e83481e3f154c0832aa59d1ec72
+  - CONTAINER: config-reloader
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483e38f6d4cb8c465b2cd15f13cd9e82a9e05de90bff08635d10f35fa22766b8
+  - CONTAINER: thanos-sidecar
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab23a49a153d2cbad11da55f12ad6c87bd0dc6ba2c9187071bb5c8cc7ecab911
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-thanos
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: prometheus-k8s-1
+  - CONTAINER: prometheus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8f59abefe5f19b2948160513f643207e7bdb2e83481e3f154c0832aa59d1ec72
+  - CONTAINER: config-reloader
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483e38f6d4cb8c465b2cd15f13cd9e82a9e05de90bff08635d10f35fa22766b8
+  - CONTAINER: thanos-sidecar
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab23a49a153d2cbad11da55f12ad6c87bd0dc6ba2c9187071bb5c8cc7ecab911
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-thanos
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: prometheus-operator-775798dbc6-8v7jv
+  - CONTAINER: prometheus-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3f2ee431c4319db2af8d96d98733315b08f41f3eed6082f87997eb8585b7c5b
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: prometheus-operator-admission-webhook-fd9f7bbc6-j8l2h
+  - CONTAINER: prometheus-operator-admission-webhook
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:82147c68e201b2aa7dc40a9a9a0801c1a0d6d8ae8d75b030c9c5d830c3318d68
+
+POD: prometheus-operator-admission-webhook-fd9f7bbc6-mnt2w
+  - CONTAINER: prometheus-operator-admission-webhook
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:82147c68e201b2aa7dc40a9a9a0801c1a0d6d8ae8d75b030c9c5d830c3318d68
+
+POD: telemeter-client-6485d8ccf4-wqc76
+  - CONTAINER: telemeter-client
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:19ad3e0a48f943bcfcec809aa097bc28f7674fe60827bef1a7b92f6cb1c74a0f
+  - CONTAINER: reload
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:483e38f6d4cb8c465b2cd15f13cd9e82a9e05de90bff08635d10f35fa22766b8
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: thanos-querier-766f4c5ddd-f8kbr
+  - CONTAINER: thanos-query
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab23a49a153d2cbad11da55f12ad6c87bd0dc6ba2c9187071bb5c8cc7ecab911
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: prom-label-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:175057183eba3e92f57f45a47ea697da7fdbeb45b1cf933e7c5b8570da973458
+  - CONTAINER: kube-rbac-proxy-rules
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: thanos-querier-766f4c5ddd-xdsk6
+  - CONTAINER: thanos-query
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab23a49a153d2cbad11da55f12ad6c87bd0dc6ba2c9187071bb5c8cc7ecab911
+  - CONTAINER: kube-rbac-proxy-web
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: prom-label-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:175057183eba3e92f57f45a47ea697da7fdbeb45b1cf933e7c5b8570da973458
+  - CONTAINER: kube-rbac-proxy-rules
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+
+==========================================================
+ NAMESPACE: openshift-multus
+
+POD: multus-8wg6s
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-28qx2
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-fhh2c
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-hmnq2
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-kjpvv
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-ksggt
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-lx2pd
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-additional-cni-plugins-sfkjx
+  - CONTAINER: kube-multus-additional-cni-plugins
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-admission-controller-6c46bf7fd-hfgd9
+  - CONTAINER: multus-admission-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:72cb5c4094d12209d11ae3c37fa43745d1f4cc8dcf1279374bda50bce94dbceb
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: multus-admission-controller-6c46bf7fd-vw6j7
+  - CONTAINER: multus-admission-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:72cb5c4094d12209d11ae3c37fa43745d1f4cc8dcf1279374bda50bce94dbceb
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: multus-fdrrx
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-fhxrk
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-h7bcr
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-mdjfb
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-pjt4w
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: multus-qbkbf
+  - CONTAINER: kube-multus
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b5646f758d46c6c0ee055524f1912c32f44b6fe2d61edfb51434a878f4765b7d
+
+POD: network-metrics-daemon-7w7c5
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-8pcpq
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-dc2dj
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-ggb5h
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-lt9cn
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-lvx2z
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+POD: network-metrics-daemon-p52jz
+  - CONTAINER: network-metrics-daemon
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b2ef0108f14c29037dfc1ff809e94b71b96412090d094a592b8f07516383805e
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+
+
+==========================================================
+ NAMESPACE: openshift-network-console
+
+POD: networking-console-plugin-7b6c74976b-qwcjp
+  - CONTAINER: networking-console-plugin
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f07198b460fda9a56e512a49327b4e3790fa1c380059fff664120dcef5ae39c0
+
+POD: networking-console-plugin-7b6c74976b-wdbqs
+  - CONTAINER: networking-console-plugin
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f07198b460fda9a56e512a49327b4e3790fa1c380059fff664120dcef5ae39c0
+
+
+==========================================================
+ NAMESPACE: openshift-network-diagnostics
+
+POD: network-check-source-fd77d5ccf-w9npq
+  - CONTAINER: check-endpoints
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-79fsq
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-jbg5c
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-lpmcn
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-mnl2d
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-n8slb
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-nvnhr
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+POD: network-check-target-pwn6g
+  - CONTAINER: network-check-target-container
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+
+==========================================================
+ NAMESPACE: openshift-network-node-identity
+
+POD: network-node-identity-bpbxh
+  - CONTAINER: webhook
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: approver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: network-node-identity-lhvk4
+  - CONTAINER: webhook
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: approver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: network-node-identity-s4qjh
+  - CONTAINER: webhook
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: approver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+
+==========================================================
+ NAMESPACE: openshift-network-operator
+
+POD: iptables-alerter-78npg
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-7jxkn
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-gb7lc
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-j8rzd
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-pr8pc
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-t55qz
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: iptables-alerter-xjt96
+  - CONTAINER: iptables-alerter
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d5f6280bed89c9af8de9a8eba02df9a6be3f7825c8858b1895dfb923f2cfc2bf
+
+POD: network-operator-6859b8d49b-tqp5k
+  - CONTAINER: network-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1e52826a18a8edd6b4d1d6dadf2d842afa236974dccb6d37ccbb19971f1fa31d
+
+
+==========================================================
+ NAMESPACE: openshift-node
+
+
+==========================================================
+ NAMESPACE: openshift-nutanix-infra
+
+
+==========================================================
+ NAMESPACE: openshift-oauth-apiserver
+
+POD: apiserver-5bb8cd5996-mbzcm
+  - CONTAINER: oauth-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5079684833d3448b84f7fc5206ee274ef1a981b4128241ed446ec3b666c91e3
+
+POD: apiserver-5bb8cd5996-t7srj
+  - CONTAINER: oauth-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5079684833d3448b84f7fc5206ee274ef1a981b4128241ed446ec3b666c91e3
+
+POD: apiserver-5bb8cd5996-wlbs6
+  - CONTAINER: oauth-apiserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5079684833d3448b84f7fc5206ee274ef1a981b4128241ed446ec3b666c91e3
+
+
+==========================================================
+ NAMESPACE: openshift-openstack-infra
+
+
+==========================================================
+ NAMESPACE: openshift-operator-controller
+
+POD: operator-controller-controller-manager-8587f4789f-zxgwp
+  - CONTAINER: manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cac3e686b93f29acc491a58d663db9d073aee0b9610f027f548ee7336274ce69
+
+
+==========================================================
+ NAMESPACE: openshift-operator-lifecycle-manager
+
+POD: catalog-operator-8478b6cff9-fshm2
+  - CONTAINER: catalog-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5d7716708c2b0341a986b09c9f63647cd79f1b4aa0dc0c33f04643def3159c0f
+
+POD: olm-operator-6fff7b54bc-z6tl8
+  - CONTAINER: olm-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5d7716708c2b0341a986b09c9f63647cd79f1b4aa0dc0c33f04643def3159c0f
+
+POD: package-server-manager-7cbf7b89c-89ww9
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: package-server-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5d7716708c2b0341a986b09c9f63647cd79f1b4aa0dc0c33f04643def3159c0f
+
+POD: packageserver-764b4d658-f86xs
+  - CONTAINER: packageserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5d7716708c2b0341a986b09c9f63647cd79f1b4aa0dc0c33f04643def3159c0f
+
+POD: packageserver-764b4d658-snjh6
+  - CONTAINER: packageserver
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5d7716708c2b0341a986b09c9f63647cd79f1b4aa0dc0c33f04643def3159c0f
+
+
+==========================================================
+ NAMESPACE: openshift-operators
+
+POD: openshift-pipelines-operator-75d5dddc64-88kcm
+  - CONTAINER: openshift-pipelines-operator-lifecycle
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-rhel9-operator@sha256:bdbdbea0fc04f708dd70aec72dd364d41cb03b56102b4b05d0e33688c14e1e8c
+  - CONTAINER: openshift-pipelines-operator-cluster-operations
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-rhel9-operator@sha256:bdbdbea0fc04f708dd70aec72dd364d41cb03b56102b4b05d0e33688c14e1e8c
+
+POD: tekton-operator-webhook-57f45cc669-bsbzw
+  - CONTAINER: tekton-operator-webhook
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-operator-webhook-rhel9@sha256:cc9124d155fd82e77c5c1b30a169cae037c8269ceed83b85d154a8b7ba2a1a41
+
+
+==========================================================
+ NAMESPACE: openshift-ovirt-infra
+
+
+==========================================================
+ NAMESPACE: openshift-ovn-kubernetes
+
+POD: ovnkube-control-plane-6cd9d9dd5-8mp7b
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: ovnkube-cluster-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-control-plane-6cd9d9dd5-rg7x9
+  - CONTAINER: kube-rbac-proxy
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: ovnkube-cluster-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-56l9r
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-9jbnx
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-cwbj5
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-j6nd6
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-jh88p
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-kwzpk
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+POD: ovnkube-node-t72rr
+  - CONTAINER: ovn-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovn-acl-logging
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: kube-rbac-proxy-node
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: kube-rbac-proxy-ovn-metrics
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2b04d3076f278eb2cd40801ffe2b482b89f10c72f01e3b3100996559574dcc41
+  - CONTAINER: northd
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: nbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: sbdb
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+  - CONTAINER: ovnkube-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b51d4cfdff4fa5a7b544938050cf4e9a586199f19ec45fa8e92abe039a5cb77c
+
+
+==========================================================
+ NAMESPACE: openshift-pipelines
+
+POD: pipelines-as-code-controller-7db7654675-69twv
+  - CONTAINER: pac-controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-pipelines-as-code-controller-rhel9@sha256:21115568507c9b5cf5d7ec755dae34cdda0489f6e45749b3d0edf899e5ce9467
+
+POD: pipelines-as-code-watcher-fdd54cc7b-t2sqb
+  - CONTAINER: pac-watcher
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-pipelines-as-code-watcher-rhel9@sha256:1d3751f8b8b4e38017ea26965038fd01223f90c362787e84cd66aa0a99bb948d
+
+POD: pipelines-as-code-webhook-6869bdcdf-zjqfw
+  - CONTAINER: pac-webhook
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-pipelines-as-code-webhook-rhel9@sha256:81052ab4ed1027b719f27e3f9ed2fea92cc53a6c6f09c8cdff841fb201f2b793
+
+POD: pipelines-console-plugin-5cb67bdb75-6fzkh
+  - CONTAINER: pipelines-console-plugin
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-console-plugin-rhel9@sha256:9bd9cd6f769b17095f9adaa370358d83b64d735dd811bb6dc6aea1936bb290e7
+
+POD: tekton-chains-controller-c59958cb6-b4j5m
+  - CONTAINER: tekton-chains-controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-chains-controller-rhel9@sha256:66cd9f353839c9acc70fc82697ddaab47fc69b6b8e7a2a2d53956450b9677cc6
+
+POD: tekton-events-controller-b5cdcb649-8cbk5
+  - CONTAINER: tekton-events-controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-events-rhel9@sha256:ee2fcbc670a57f1f0de140d12d13ef73f2d1ddded83db8893c7c9a47c43719b2
+
+POD: tekton-operator-proxy-webhook-6547d6fc8-txvd7
+  - CONTAINER: proxy
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-operator-proxy-rhel9@sha256:78428f7884abb1249fce9ec4602b81593c58ff0d84b64fda2c03ed3c9558ea78
+
+POD: tekton-pipelines-controller-598f47b497-6fwdk
+  - CONTAINER: tekton-pipelines-controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-controller-rhel9@sha256:17b972e84ee15b9768a8c1ced8815a41cf04a6cdd58502c52f6455896926808e
+
+POD: tekton-pipelines-remote-resolvers-7dd4bd8557-bcpj6
+  - CONTAINER: controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-resolvers-rhel9@sha256:ea635cd3bea729b910aef2379d25fec2dcabc13c16dbdbb34cf03053637eb13d
+
+POD: tekton-pipelines-webhook-85d74c4c45-pk78x
+  - CONTAINER: webhook
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-webhook-rhel9@sha256:bdfe579e12bc084eb1ed3b4a42ddb9db0755bad78752ee33283d3af45bc5b530
+
+POD: tekton-results-api-7f9d4d567d-x69jn
+  - CONTAINER: api
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-results-api-rhel9@sha256:43b2f1c0bbebe2062ba9d74adbaf653769514672aacdcf7849f45c3553dead7a
+
+POD: tekton-results-postgres-0
+  - CONTAINER: postgres
+    IMAGE:     registry.redhat.io/rhel9/postgresql-15@sha256:90ec347a35ab8a5d530c8d09f5347b13cc71df04f3b994bfa8b1a409b1171d59
+
+POD: tekton-results-retention-policy-agent-64696c7bc5-pl2rd
+  - CONTAINER: retention-policy-agent
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-results-retention-policy-agent-rhel9@sha256:9816cb86c44759148fca608f5ea8f10da0bc82f26cbe655254992b52febbe11e
+
+POD: tekton-results-watcher-7bd44c7bf6-7s5qm
+  - CONTAINER: watcher
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-results-watcher-rhel9@sha256:baf5c05a730e9a19bedf783b6070e7bc3f32417d5e02ae684e440521f7c1f964
+
+POD: tekton-triggers-controller-766958c86d-wxnv5
+  - CONTAINER: tekton-triggers-controller
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-triggers-controller-rhel9@sha256:a20a3ddd60b0bdb701da737cb4bf96091f4695ad256eafec63b5b5e8a171304f
+
+POD: tekton-triggers-core-interceptors-7c959c568f-25rbh
+  - CONTAINER: tekton-triggers-core-interceptors
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-triggers-core-interceptors-rhel9@sha256:e4a5c7a00b4c4f921f4389e969764020155f6ebbeb1cb4a08ecfd118088bb0c6
+
+POD: tekton-triggers-webhook-7d4c6b44d7-hm95k
+  - CONTAINER: webhook
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-triggers-webhook-rhel9@sha256:dd28b69e663f500f0ef71ea05216a580f48258521b0609f4d947ddd8ca025da5
+
+POD: tkn-cli-serve-66ff9c79d6-jmwcv
+  - CONTAINER: tkn-cli-serve
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-serve-tkn-cli-rhel9@sha256:86d4d2d86f3fa1b103c260d6ef7e861d4c3ca1edbe952803d0b524c6f7935eaa
+
+
+==========================================================
+ NAMESPACE: openshift-route-controller-manager
+
+POD: route-controller-manager-59bf8cd567-gqbmc
+  - CONTAINER: route-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e772e6f6171d0e43f63b9a43f2ea112e2c0ec3c4a02c7b70718f3eb983ef0278
+
+POD: route-controller-manager-59bf8cd567-xc9h7
+  - CONTAINER: route-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e772e6f6171d0e43f63b9a43f2ea112e2c0ec3c4a02c7b70718f3eb983ef0278
+
+POD: route-controller-manager-59bf8cd567-zmnlg
+  - CONTAINER: route-controller-manager
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e772e6f6171d0e43f63b9a43f2ea112e2c0ec3c4a02c7b70718f3eb983ef0278
+
+
+==========================================================
+ NAMESPACE: openshift-service-ca
+
+POD: service-ca-7f5c96dbc4-dxtfd
+  - CONTAINER: service-ca-controller
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0f71cd6e1f985147d39fb7cb6a5e75f370cd980344289fd68b7b2d4ac2a5d0dc
+
+
+==========================================================
+ NAMESPACE: openshift-service-ca-operator
+
+POD: service-ca-operator-5868d997b4-7k6rt
+  - CONTAINER: service-ca-operator
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0f71cd6e1f985147d39fb7cb6a5e75f370cd980344289fd68b7b2d4ac2a5d0dc
+
+
+==========================================================
+ NAMESPACE: openshift-storage
+
+POD: ceph-csi-controller-manager-6d7899b4c8-lslgj
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9-operator@sha256:26a745e06d8ced8ed9289f6017d4a5d056fed07be9e96b42f1e5bd24ed219c22
+
+POD: cnpg-controller-manager-6d94dfcdd-bpt7d
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/odf4/odf-cloudnative-pg-rhel9-operator@sha256:4afe25bd7831c33ab392d36ce8a23350523e0117ff5836cec5122edc2958de1f
+
+POD: csi-addons-controller-manager-54f45d8948-xnp6w
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-rhel9-operator@sha256:704fe7e732cd3d96375e53a4e5a05210070ca4baffa539dd9d6af80d186d08cd
+
+POD: noobaa-core-0
+  - CONTAINER: core
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+  - CONTAINER: noobaa-log-processor
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+
+POD: noobaa-db-pg-cluster-1
+  - CONTAINER: postgres
+    IMAGE:     registry.redhat.io/rhel9/postgresql-16@sha256:3a0eca6877bbdbe137e5b83e1be923fe56f287ad843da292e6aad06c3b32687c
+
+POD: noobaa-db-pg-cluster-2
+  - CONTAINER: postgres
+    IMAGE:     registry.redhat.io/rhel9/postgresql-16@sha256:3a0eca6877bbdbe137e5b83e1be923fe56f287ad843da292e6aad06c3b32687c
+
+POD: noobaa-default-backing-store-noobaa-pod-09280dec
+  - CONTAINER: noobaa-agent
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+
+POD: noobaa-default-backing-store-noobaa-pod-ab92a98a
+  - CONTAINER: noobaa-agent
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+
+POD: noobaa-default-backing-store-noobaa-pod-dbef4dac
+  - CONTAINER: noobaa-agent
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+
+POD: noobaa-endpoint-868b669667-lmkc2
+  - CONTAINER: endpoint
+    IMAGE:     registry.redhat.io/odf4/mcg-core-rhel9@sha256:0cbae930a2128e8be0115513d4eadcf4242edad0edbf0dc50273040eeb133fa0
+
+POD: noobaa-operator-8489b95567-6v66g
+  - CONTAINER: noobaa-operator
+    IMAGE:     registry.redhat.io/odf4/mcg-rhel9-operator@sha256:5caa0f1edab5ebb0198319f9086e60e8713022adf090083ebdb3e2753df899a3
+
+POD: ocs-client-operator-console-76f66b4667-tjgxw
+  - CONTAINER: ocs-client-operator-console
+    IMAGE:     registry.redhat.io/odf4/ocs-client-console-rhel9@sha256:a15290f97ba9e2232f663423a4cac671167031d9d77dd3ed7aa5c617f31ec4bc
+
+POD: ocs-client-operator-controller-manager-6845d9cd8d-8vf5h
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/odf4/ocs-client-rhel9-operator@sha256:c9ab7e51392529fee3b642b6114447b0d87c2c1f05458a3a26eed22de9ff6295
+
+POD: ocs-metrics-exporter-5d5d99768c-9fkvr
+  - CONTAINER: kube-rbac-proxy-main
+    IMAGE:     registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:8c333514f299eb1bc0ae6ca598fa6f4d8b9b8fcfa3f99df3ce98b528bda5c49d
+  - CONTAINER: kube-rbac-proxy-self
+    IMAGE:     registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:8c333514f299eb1bc0ae6ca598fa6f4d8b9b8fcfa3f99df3ce98b528bda5c49d
+  - CONTAINER: ocs-metrics-exporter
+    IMAGE:     registry.redhat.io/odf4/ocs-metrics-exporter-rhel9@sha256:1dce51d7d859f35e6031c9a55e0614cfe9da746483d1180939165e58d6f25432
+
+POD: ocs-operator-67d998544b-smgh6
+  - CONTAINER: ocs-operator
+    IMAGE:     registry.redhat.io/odf4/ocs-rhel9-operator@sha256:d9c0533b05f4c4bf0ae220d260e0a4911ebe15cf56f81ef4ce12d0bbf295414b
+
+POD: odf-console-757dbb5878-srtr6
+  - CONTAINER: odf-console
+    IMAGE:     registry.redhat.io/odf4/odf-console-rhel9@sha256:e151819e473739a80e25d62e0a29ddf544cad64ca3131608e728cf36526b0852
+
+POD: odf-external-snapshotter-operator-6d4785bcbc-lxkzc
+  - CONTAINER: odf-external-snapshotter-operator
+    IMAGE:     registry.redhat.io/odf4/odf-external-snapshotter-rhel9-operator@sha256:f35a74fc2265abbb41879d91068d6a202775d68cb90db8aa9bbe25d2f196ce32
+
+POD: odf-operator-controller-manager-7d87447c97-25tb4
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/odf4/odf-rhel9-operator@sha256:5ef451b4af639a0e337ab90c91e9de1b112c354aaf69a422f3ab5f2f1e4ef9ff
+
+POD: openshift-storage.cephfs.csi.ceph.com-ctrlplugin-676bd8fdc69wmm
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: csi-provisioner
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:be197345060f3a2ee943834b9019f34e657c7d7e1e3c42a7c723931c83e0817b
+  - CONTAINER: csi-resizer
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:4796f9c27d1131c2873d4c70bd800b10fc15c82957cf5dccd160312fe40a7cdc
+  - CONTAINER: csi-attacher
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:e2cc145a8ec91110bd8120cc8656415a2f05e29e240943d73d7a22c39eb1588b
+  - CONTAINER: csi-snapshotter
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:8a98cbe7f67df0c8a27f4e89a12dcfb22a2cdb7de67ede54fa2a891d3141a7c4
+  - CONTAINER: ex-csi-snapshotter
+    IMAGE:     registry.redhat.io/odf4/odf-external-snapshotter-sidecar-rhel9@sha256:a208ebc0ad5bfa16ee4d2e205692053db0e82d170dd11fbd8c8dd8f1c6497885
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-ctrlplugin-676bd8fdcj22dg
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: csi-provisioner
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:be197345060f3a2ee943834b9019f34e657c7d7e1e3c42a7c723931c83e0817b
+  - CONTAINER: csi-resizer
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:4796f9c27d1131c2873d4c70bd800b10fc15c82957cf5dccd160312fe40a7cdc
+  - CONTAINER: csi-attacher
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:e2cc145a8ec91110bd8120cc8656415a2f05e29e240943d73d7a22c39eb1588b
+  - CONTAINER: csi-snapshotter
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:8a98cbe7f67df0c8a27f4e89a12dcfb22a2cdb7de67ede54fa2a891d3141a7c4
+  - CONTAINER: ex-csi-snapshotter
+    IMAGE:     registry.redhat.io/odf4/odf-external-snapshotter-sidecar-rhel9@sha256:a208ebc0ad5bfa16ee4d2e205692053db0e82d170dd11fbd8c8dd8f1c6497885
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-95ps9
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-b76dg
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-g44vb
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-gkmzf
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-k74td
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-krzgz
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.cephfs.csi.ceph.com-nodeplugin-lsr7p
+  - CONTAINER: csi-cephfsplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-ctrlplugin-6d5c54c64-j82lp
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: csi-provisioner
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:be197345060f3a2ee943834b9019f34e657c7d7e1e3c42a7c723931c83e0817b
+  - CONTAINER: csi-resizer
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:4796f9c27d1131c2873d4c70bd800b10fc15c82957cf5dccd160312fe40a7cdc
+  - CONTAINER: csi-attacher
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:e2cc145a8ec91110bd8120cc8656415a2f05e29e240943d73d7a22c39eb1588b
+  - CONTAINER: csi-snapshotter
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:8a98cbe7f67df0c8a27f4e89a12dcfb22a2cdb7de67ede54fa2a891d3141a7c4
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: csi-omap-generator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-ctrlplugin-6d5c54c64-rqdg7
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: csi-provisioner
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:be197345060f3a2ee943834b9019f34e657c7d7e1e3c42a7c723931c83e0817b
+  - CONTAINER: csi-resizer
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:4796f9c27d1131c2873d4c70bd800b10fc15c82957cf5dccd160312fe40a7cdc
+  - CONTAINER: csi-attacher
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:e2cc145a8ec91110bd8120cc8656415a2f05e29e240943d73d7a22c39eb1588b
+  - CONTAINER: csi-snapshotter
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:8a98cbe7f67df0c8a27f4e89a12dcfb22a2cdb7de67ede54fa2a891d3141a7c4
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: csi-omap-generator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-229s4
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-4bvts
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-4vpdb
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-2c8zl
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-cz75j
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-fpxph
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-ksbqf
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-nsh82
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-rqvw8
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-csi-addons-zpxm9
+  - CONTAINER: csi-addons
+    IMAGE:     registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a24c794d191c861e5f33ba191e62bba3c6ad4e1fae981a306af8ea91a642fc5b
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-gj2n7
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-jrpxl
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-jzmq2
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: openshift-storage.rbd.csi.ceph.com-nodeplugin-t9bwq
+  - CONTAINER: csi-rbdplugin
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+  - CONTAINER: driver-registrar
+    IMAGE:     registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:bc85e17c434bca479fbd1b4e7dd4bb3575b45d472ead194d1335f142d9da4f8d
+  - CONTAINER: log-rotator
+    IMAGE:     registry.redhat.io/odf4/cephcsi-rhel9@sha256:f04a51208c6a92eaf85153ff67ef12865f4eded3480376d9eee3a9a0a2cb32a5
+
+POD: rook-ceph-operator-5c7955899c-lvcc7
+  - CONTAINER: rook-ceph-operator
+    IMAGE:     registry.redhat.io/odf4/rook-ceph-rhel9-operator@sha256:4b3462b5e4ffaeb9741e5310ce03ef042194171863224057831c884c29aeed58
+
+POD: ux-backend-server-5cfd489f4c-7ttq2
+  - CONTAINER: ux-backend-server
+    IMAGE:     registry.redhat.io/odf4/ocs-rhel9-operator@sha256:d9c0533b05f4c4bf0ae220d260e0a4911ebe15cf56f81ef4ce12d0bbf295414b
+  - CONTAINER: oauth-proxy
+    IMAGE:     registry.redhat.io/openshift4/ose-oauth-proxy-rhel9@sha256:01cc614791da37b63a3516f6262ec7103a71e416c7a9da7e4944418f86a51688
+
+
+==========================================================
+ NAMESPACE: openshift-user-workload-monitoring
+
+
+==========================================================
+ NAMESPACE: openshift-vsphere-infra
+
+
+==========================================================
+ NAMESPACE: rhacs-operator
+
+POD: admission-control-7544899d95-4vsgg
+  - CONTAINER: admission-control
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+POD: admission-control-7544899d95-ggndw
+  - CONTAINER: admission-control
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+POD: admission-control-7544899d95-rhcrj
+  - CONTAINER: admission-control
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+POD: central-8b889dfc9-qd8bx
+  - CONTAINER: central
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+POD: central-db-785b484c4-nwjr6
+  - CONTAINER: central-db
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-central-db-rhel9@sha256:e4b5d1fcf355631b6b36a5be250af717b47697a2163d75f1f117621c693bd720
+  - CONTAINER: cert-watcher
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-central-db-rhel9@sha256:e4b5d1fcf355631b6b36a5be250af717b47697a2163d75f1f117621c693bd720
+
+POD: collector-76dh9
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-8lflj
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-crhks
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-gmnk5
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-jf72v
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-n8v6x
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: collector-qxvgz
+  - CONTAINER: collector
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel9@sha256:f7dc1df830593c93d62ed2179f9d490c5016ff7cd5469e893c1d64e49542d9dc
+  - CONTAINER: compliance
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+  - CONTAINER: node-inventory
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel9@sha256:0624024282c6f18cfdc801bdb7da47ec2665755a4d673045afb8ef75dbeb9433
+
+POD: config-controller-6b59778bb5-j7f58
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+POD: rhacs-operator-controller-manager-859bbb7f6f-mmzm2
+  - CONTAINER: manager
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-rhel9-operator@sha256:79b2148d133e88cc538dca567dc51b3536b14edc0d059a2e332dae3919725a29
+
+POD: scanner-697f849646-g5f2k
+  - CONTAINER: scanner
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-rhel9@sha256:d7de2319bd53979dabfc5b5bc5dbd911e7602b70e63203d89f0f1494db745922
+
+POD: scanner-697f849646-gxw8r
+  - CONTAINER: scanner
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-rhel9@sha256:d7de2319bd53979dabfc5b5bc5dbd911e7602b70e63203d89f0f1494db745922
+
+POD: scanner-db-6b456d4d46-94dmm
+  - CONTAINER: db
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-db-rhel9@sha256:063329f94c91ce5e85f4e10d25026c127b7c9586cc4b19f9297b4be5ea18cfa4
+
+POD: scanner-v4-db-fd96b4c94-2mqg6
+  - CONTAINER: db
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-db-rhel9@sha256:41e3b3cbb158da4424c23f25775ec93cb6e5590ff85386b03a53d64437262368
+  - CONTAINER: cert-watcher
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-db-rhel9@sha256:41e3b3cbb158da4424c23f25775ec93cb6e5590ff85386b03a53d64437262368
+
+POD: scanner-v4-indexer-75ccbd4d7f-6z69p
+  - CONTAINER: indexer
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-rhel9@sha256:faea2ace31814ca398cfa7571930546e0416fc07d3df2d437f0a597177bfd847
+
+POD: scanner-v4-indexer-75ccbd4d7f-7885b
+  - CONTAINER: indexer
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-rhel9@sha256:faea2ace31814ca398cfa7571930546e0416fc07d3df2d437f0a597177bfd847
+
+POD: scanner-v4-matcher-577d8ccb79-5n46l
+  - CONTAINER: matcher
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-rhel9@sha256:faea2ace31814ca398cfa7571930546e0416fc07d3df2d437f0a597177bfd847
+
+POD: scanner-v4-matcher-577d8ccb79-qmjgm
+  - CONTAINER: matcher
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-rhel9@sha256:faea2ace31814ca398cfa7571930546e0416fc07d3df2d437f0a597177bfd847
+
+POD: sensor-75d86fc499-hn64n
+  - CONTAINER: sensor
+    IMAGE:     registry.redhat.io/advanced-cluster-security/rhacs-main-rhel9@sha256:349d23ec51efe7d77b7d3e8bb258b3bf65c3e8858cc432923f1633878fc09b2a
+
+
+==========================================================
+ NAMESPACE: test-cpu-ram
+
+POD: app-base-test-74f8fbc489-n2sqn
+  - CONTAINER: app-base-test
+    IMAGE:     image-registry.openshift-image-registry.svc:5000/test-cpu-ram/test-resources@sha256:f6c2eda504e293abdc158595192925ac926e13a4f889cb845c8ccb947266dcd2
+
+POD: app-base-test-74f8fbc489-p5qp4
+  - CONTAINER: app-base-test
+    IMAGE:     image-registry.openshift-image-registry.svc:5000/test-cpu-ram/test-resources@sha256:f6c2eda504e293abdc158595192925ac926e13a4f889cb845c8ccb947266dcd2
+
+POD: bc-test-resources-1-build
+  - CONTAINER: docker-build
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5f10ba99ee1d1db268129a82c8d02f4dc814ccc6563296c2cb9624e2202d3111
+
+POD: bc-test-resources-2-build
+  - CONTAINER: docker-build
+    IMAGE:     quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5f10ba99ee1d1db268129a82c8d02f4dc814ccc6563296c2cb9624e2202d3111
+
+POD: build-app-0lmu7t-git-clone-pod
+  - CONTAINER: step-prepare-and-run
+    IMAGE:     registry.redhat.io/openshift-pipelines/pipelines-git-init-rhel9@sha256:665dae0d8a843f89e5bff8ae7e56f27829b2218242085a09ac0cc1659e2acf85
+
+
