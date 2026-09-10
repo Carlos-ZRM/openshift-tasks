@@ -1,0 +1,25 @@
+==================================================
+ Routes with HTTP termination (no TLS) (1)
+==================================================
+  test-cpu-ram/only-http
+
+==================================================
+ Routes with HTTPS/TLS - policy Allow or empty (5)
+==================================================
+  rhacs-operator/central-mtls (termination=passthrough, policy=empty)
+  test-cpu-ram-kustomize/route-app-base-test (termination=edge, policy=empty)
+  test-cpu-ram/https-allow-insecure (termination=edge, policy=Allow)
+  test-cpu-ram/https-none-insecure (termination=reencrypt, policy=empty)
+  test-cpu-ram/route-app-base-test (termination=edge, policy=empty)
+
+==================================================
+ Routes with HTTPS/TLS - policy Redirect or Deny/None (8)
+==================================================
+  dev-netcat/httpd-24 (termination=edge, policy=Redirect)
+  dev-netcat/httpd-24-latest (termination=edge, policy=Redirect)
+  dev-netcat/python-netcat-app (termination=edge, policy=Redirect)
+  keycloak/keycloak (termination=reencrypt, policy=Redirect)
+  prod-netcat/python-netcat-app (termination=edge, policy=Redirect)
+  rhacs-operator/central (termination=passthrough, policy=Redirect)
+  test-cpu-ram/httpd-24 (termination=edge, policy=None)
+  xpk/route-wedding-frontend (termination=edge, policy=Redirect)

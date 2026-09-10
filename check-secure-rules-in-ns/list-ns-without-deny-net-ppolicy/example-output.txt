@@ -1,0 +1,19 @@
+==================================================
+ Namespaces WITH deny-all NetworkPolicy (2)
+==================================================
+  assisted-installer
+  xpk
+
+==================================================
+ Namespaces WITHOUT deny-all NetworkPolicy (10)
+==================================================
+  cert-manager
+  cert-manager-operator
+  default
+  dev-netcat
+  keycloak
+  prod-netcat
+  rhacs-operator
+  test-cpu-ram
+  test-cpu-ram-kustomize
+  test-netcat
