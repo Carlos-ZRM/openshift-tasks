@@ -1,0 +1,12 @@
+apiVersion: monitoring.openshift.io/v1
+kind: AlertRelabelConfig
+metadata:
+  name: etcd-control-plane
+  namespace: openshift-monitoring
+spec:
+  configs:
+    - sourceLabels: [alertname]
+      regex: '.*etcd.*'
+      targetLabel: custom_monitoring
+      replacement: control-plane
+      action: Replace

@@ -1,0 +1,13 @@
+apiVersion: monitoring.openshift.io/v1
+kind: AlertingRule
+metadata:
+  name: etcd-relabel-test
+  namespace: openshift-monitoring
+spec:
+  groups:
+    - name: test
+      rules:
+        - alert: etcdRelabelTest
+          expr: vector(1)
+          labels:
+            severity: info

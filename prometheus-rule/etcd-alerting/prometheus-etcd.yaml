@@ -1,0 +1,20 @@
+apiVersion: monitoring.openshift.io/v1
+kind: AlertingRule
+metadata:
+  name: custom-rules
+  namespace: openshift-monitoring
+spec:
+  groups:
+  - name: custom-rules
+    labels:
+      custom_rule: true
+    rules:
+    - alert: RestartPod
+      expr: sum by (namespace, pod) (increase(kube_pod_container_status_restarts_total[5m])) > 0 
+      for: 5m
+      labels:
+        severity: warning
+        custom_monitoring_object: pod
+      annotations:
+        description: "High restarts events on pod {{ $labels.pod }} on namespace {{ $labels.namespace }}"
+        summary: "The pod has exceeded 2 restarts for more than 5 minutes."
