@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Poetry / entornos virtuales ---
+# (poetry.lock SÍ se versiona)
+.venv/
+venv/
+.python-version
+
+# --- Pruebas y herramientas ---
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Secretos y certificados locales ---
+*.key
+*.crt
+*.pem
+.env
+.env.*
+
+# --- Artefactos de la demo ---
+*.zip
+review*.json
+
+# --- Editores / SO ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Claude Code (configuración personal) ---
+.claude/settings.local.json

@@ -1,0 +1,19 @@
+# Alguien inventa un centro de costo que no existe
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reporting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reporting
+  template:
+    metadata:
+      labels:
+        app: reporting
+        cost-center: CC-9999
+    spec:
+      containers:
+        - name: app
+          image: registry.access.redhat.com/ubi9/httpd-24

@@ -1,0 +1,83 @@
+# CLAUDE.md
+
+Guía para Claude Code en este repositorio.
+
+## Qué es
+
+Demo de **Admission Webhooks (mutating + validating) con enfoque FinOps** para OpenShift.
+Un solo servicio Flask (`app.py`) expone dos endpoints:
+
+- `POST /mutate`: hereda las labels `cost-center`, `team` y `environment` del Namespace al workload, pone `resources.requests` por defecto si faltan, agrega la anotación `finops.demo/mutated` y regresa `warnings`.
+- `POST /validate`: rechaza el workload si faltan labels FinOps, si el `cost-center` no está en el catálogo, si `environment` no es dev/qa/prod, o si un pod en dev pide más CPU que `DEV_MAX_CPU_MILLICORES`.
+- `GET /healthz`: readiness.
+
+Aplica a **Pods (CREATE)** y **Deployments (CREATE/UPDATE)**, y solo en namespaces con la label `finops.demo/enforce=true`.
+
+## Estructura
+
+```
+app.py                 # webhook (lógica de mutate/validate)
+tests/test_webhook.py  # pruebas sin cluster (mockean namespace_labels)
+Dockerfile             # imagen UBI9 python-311, usa requirements.txt
+deploy/                # manifiestos del webhook (ns, rbac, configmap, deployment, service, webhook configs)
+demo/                  # namespaces y workloads para el guion de la demo
+README.md              # guion de la demo paso a paso
+```
+
+## Comandos
+
+Dependencias con **Poetry**:
+
+```bash
+poetry install
+poetry run pytest                          # o: poetry run python tests/test_webhook.py
+```
+
+Correr local (sin cluster, la herencia de labels del namespace no funciona):
+
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -days 1 -keyout tls.key -out tls.crt -subj "/CN=localhost"
+TLS_CERT=tls.crt TLS_KEY=tls.key poetry run python app.py
+curl -sk https://localhost:8443/healthz
+```
+
+Build y deploy en OpenShift:
+
+```bash
+oc apply -f deploy/00-namespace.yaml
+oc -n finops-webhook new-build --name finops-webhook --binary --strategy docker   # solo la primera vez
+oc -n finops-webhook start-build finops-webhook --from-dir . --follow
+oc apply -f deploy/
+```
+
+El `Dockerfile` instala desde `requirements.txt`. Si cambias dependencias en Poetry, regenéralo:
+
+```bash
+poetry export -f requirements.txt --without-hashes -o requirements.txt
+```
+(En Poetry 2.x esto requiere el plugin `poetry-plugin-export`.)
+
+## Configuración (env vars, vía ConfigMap `finops-policy`)
+
+| Variable | Default |
+|---|---|
+| `ALLOWED_COST_CENTERS` | `CC-1001,CC-2002` |
+| `DEFAULT_CPU_REQUEST` | `100m` |
+| `DEFAULT_MEMORY_REQUEST` | `128Mi` |
+| `DEV_MAX_CPU_MILLICORES` | `1000` |
+| `TLS_CERT` / `TLS_KEY` | `/certs/tls.crt` / `/certs/tls.key` |
+
+Las variables se leen al arrancar: después de cambiar el ConfigMap hay que hacer `rollout restart`.
+
+## Convenciones y cosas a cuidar
+
+- **Idioma:** los mensajes al usuario, los logs, los comentarios y la documentación van en español.
+- **Mensajes de rechazo y warnings** empiezan con `[FinOps]`, porque son lo que el público ve en la demo.
+- **JSON Patch:** escapa las keys con `esc()` (`/` → `~1`). Si el mapa (`labels`, `annotations`, `resources`) no existe, agrega el mapa completo en lugar de una key suelta.
+- **El mutating nunca sobrescribe** labels o requests que el usuario ya puso; solo completa lo que falta.
+- **Pod vs Deployment:** usa `pod_template()` para obtener las rutas de labels y containers. No dupliques esa lógica.
+- **TLS en OpenShift:** viene del service-ca (anotaciones `serving-cert-secret-name` en el Service e `inject-cabundle` en las webhook configs). No agregues cert-manager.
+- **Seguridad del cluster:** mantén el `namespaceSelector` (`finops.demo/enforce=true`). El validating usa `failurePolicy: Fail`, así que nunca lo apliques a todo el cluster ni a `openshift-*`.
+- `sideEffects: None`: el webhook solo lee (el GET al namespace) y no escribe nada, por eso funciona con `--dry-run=server`.
+- **Comandos en docs:** no pongas comentarios inline (`# ...`) en bloques de shell. En zsh sin `interactivecomments` se pasan como argumentos.
+- **Cambios de lógica:** agrega o ajusta un caso en `tests/test_webhook.py` y corre las pruebas antes de terminar.

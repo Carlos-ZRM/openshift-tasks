@@ -1,0 +1,18 @@
+# Un dev despliega "como siempre": sin labels de costo y sin requests
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkout
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: checkout
+  template:
+    metadata:
+      labels:
+        app: checkout
+    spec:
+      containers:
+        - name: app
+          image: registry.access.redhat.com/ubi9/httpd-24

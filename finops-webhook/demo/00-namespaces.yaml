@@ -1,0 +1,18 @@
+# Namespace "bien gobernado": tiene sus datos FinOps
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: finops-payments
+  labels:
+    finops.demo/enforce: "true"
+    cost-center: CC-1001
+    team: payments
+    environment: dev
+---
+# Namespace "huérfano": nadie sabe a quién cobrarle
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: finops-sandbox
+  labels:
+    finops.demo/enforce: "true"

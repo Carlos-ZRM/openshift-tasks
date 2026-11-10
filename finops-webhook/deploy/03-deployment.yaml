@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finops-webhook
+  namespace: finops-webhook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: finops-webhook
+  template:
+    metadata:
+      labels:
+        app: finops-webhook
+    spec:
+      serviceAccountName: finops-webhook
+      containers:
+        - name: webhook
+          image: image-registry.openshift-image-registry.svc:5000/finops-webhook/finops-webhook:latest
+          ports:
+            - containerPort: 8443
+          envFrom:
+            - configMapRef:
+                name: finops-policy
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8443
+              scheme: HTTPS
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              memory: 128Mi
+          volumeMounts:
+            - name: tls
+              mountPath: /certs
+              readOnly: true
+      volumes:
+        - name: tls
+          secret:
+            secretName: finops-webhook-tls   # lo crea el service-ca operator

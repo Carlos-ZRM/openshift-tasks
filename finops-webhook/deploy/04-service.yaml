@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: finops-webhook
+  namespace: finops-webhook
+  annotations:
+    # OpenShift genera el certificado TLS automáticamente en este Secret
+    service.beta.openshift.io/serving-cert-secret-name: finops-webhook-tls
+spec:
+  selector:
+    app: finops-webhook
+  ports:
+    - port: 443
+      targetPort: 8443

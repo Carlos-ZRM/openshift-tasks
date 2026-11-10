@@ -1,0 +1,11 @@
+# "Catálogo" de centros de costo y reglas de presupuesto
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: finops-policy
+  namespace: finops-webhook
+data:
+  ALLOWED_COST_CENTERS: "CC-1001,CC-2002"
+  DEFAULT_CPU_REQUEST: "100m"
+  DEFAULT_MEMORY_REQUEST: "128Mi"
+  DEV_MAX_CPU_MILLICORES: "1000"
